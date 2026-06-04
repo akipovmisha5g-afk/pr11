@@ -1,0 +1,15 @@
+num = input("Введите натуральное число: ")
+digits = [int(d) for d in num]
+last = digits[-1]
+
+print(digits.count(3))                   
+print(digits.count(last))                 
+print(sum(1 for d in digits if d % 2 == 0))  
+print(sum(d for d in digits if d > 5))    
+
+prod = 1
+for d in [d for d in digits if d > 7]:    
+    prod *= d
+print(prod)
+
+print(digits.count(0) + digits.count(5)) 
